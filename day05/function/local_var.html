@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역변수의 유효 범위</title>
+</head>
+<body>
+    <h3>지역변수의 유효 범위</h3>
+
+    <script>
+        //1 증가시키는 함수
+        //지역 변수의 유효 범위 - 코드 블럭안에서 생성되고, 블럭을 벗어나면 메모리에서 삭제됨
+        function oneUp(){
+            var x = 1;  //지역변수
+            x++;
+            return x;
+        }
+
+        var num = oneUp();
+        document.write("num = " + num + "<br>"); //2
+
+        num = oneUp();
+        document.write("num = " + num + "<br>");    //2
+        // document.write("x = " + x + "<br>");        //정의되지 않은 변수
+    </script>
+</body>
+</html>
