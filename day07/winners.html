@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 당첨자 발표</title>
+    <style>
+        body{text-align: center;}
+        h1{
+            display: inline-block;
+            border: 1px solid #333;
+            background-color: #eee;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        p{font-size: 1.2em;}
+        .access{color: #00f; font-size: 1.2em; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h1>당첨자 발표</h1>
+
+    <script>
+        let member = prompt("전체 응모자 수 입력 : ");
+        let winner = prompt("당첨자 수 입력 : ");
+
+        document.write("<p>전체 응모자 수 : " + member + "명</p>");
+        document.write("<p>당첨자 : </p>")
+        for(let i = 1; i <= winner; i++){
+            let picked = Math.floor(Math.random() * member + 1);
+            
+            //if ~ else 마지막 번 옆에 ',' 지우기
+            if(i < winner)
+                document.write("당첨자 : <span class='access'>" + picked + "</span> 번, ");
+            else
+            document.write("당첨자 : <span class='access'>" + picked + "</span> 번 ");
+
+            // document.write("당첨자 : <span class='access'>" + picked + "</span> 번, ");
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>절대값 함수 만들기</title>
+</head>
+<body>
+    <h3>절대값 함수 만들기</h3>
+    <script>
+        function MyAbs(x){
+            if(x < 0)
+                return -x;
+            
+            else
+                return x;
+            
+        }
+
+        function MySquare(x){
+            return x * x;
+        }
+
+        function MyPow(x, y){ //x:밑 y:지수
+            let num = 1;    //초기값
+            for(let i = 0; i < y; i++){
+                num = num * x;
+            }
+            //x = 2, y = 4
+            //i = 0, 0<4 (true), num = 1*2 = 1
+            //i = 1, 1<4 (true), num = 2*2 = 4 (2*2)
+            //i = 2, 2<4 (true), num = 4*2 = 8 (2*2*2)
+            //i = 3, 3<4 (true), num = 8*2 = 16 (2*2*2*2)
+            //i = 4, 4<4 (false), 계산 x
+
+            return num;
+        }
+        console.log(Math.abs(-4));
+        console.log(MyAbs(-4));
+        //제곱수
+        console.log(MySquare(5));
+
+        //거듭제곱
+        console.log(Math.pow(2, 4));
+        console.log(MyPow(2, 4));
+    </script>
+</body>
+</html>
