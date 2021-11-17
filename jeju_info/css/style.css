@@ -1,0 +1,66 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+*{margin: 0; padding: 0;}
+#container{width: 1200px; height: 1000px; margin: 0 auto;}
+
+/* header 영역 */
+header{height: 100px; background-color: beige;}
+header #logo{width: 250px; float: left; padding: 25px;}
+header h1{color: rgb(7, 153, 7); font-family: 'Merienda', cursive;}
+header h1 a{text-decoration: none; color: rgb(7, 153, 7);}
+header nav{width: 700px; float: right;}
+header nav #topMenu{list-style: none; text-align: right; margin-right: 100px; padding: 20px;}
+header nav #topMenu li{display: inline-block; margin: 20px;}
+header nav #topMenu li a{text-decoration: none; color: #000;}
+header nav #topMenu li a:hover{color: rgb(7, 153, 7); text-decoration: underline;}
+
+/* index 스타일 */
+#slideShow{height: 300px; position: relative;}
+.slides img{float: left;}
+button{position: absolute; height: 100%; padding: 20px;
+    border: none; background-color: transparent; opacity: 0.5; /* 불투명도 */
+    font-size: 24px; font-weight: 800;}
+button:hover{color: #fff; background-color: #222; opacity: 0.6;}
+#prev{left: 0;}
+#next{right: 0;}
+#intro{height: 400px; margin: 0 auto; background-color: rgb(250, 248, 248);}
+#intro h1{font-size: 2.5em; padding-top: 150px; text-align: center;}
+#intro strong{color: rgb(37, 37, 172);}
+#intro #demo{text-align: center; margin-top: 60px; font-size: 1.5em;}
+
+/* travel 스타일 */
+.contents{width: 1000px; margin: 20px auto;}
+.contents section{height: 300px;}
+.contents div{margin-top: 20px;}
+.contents h2{padding-left: 20px;}
+.contents .detail img{float: left; margin-right: 40px; border-radius: 20px;}
+.contents .detail p{line-height: 2em;}
+.contents .schedule ul{list-style: none;}
+.contents .schedule ul li{margin: 10px;}
+
+/* product 스타일 */
+.product{width: 900px; margin: 30px auto;}
+.product p{line-height: 2em;}
+.product h2{margin: 10px 0;}
+.product #description{border: 1px dotted #333; border-top-left-radius: 20px;
+    border-top-right-radius: 20px; padding: 20px 60px; margin-bottom: 20px;}
+.product #receipe{border: 1px dotted #333; 
+    padding: 20px 60px; margin-bottom: 20px;}
+.product #receipe ol{padding-left: 20px;}
+.product #receipe ol li{line-height: 2em;}
+.product #package{border: 1px dotted #333; border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; padding: 20px 60px; margin-bottom: 20px;}
+.product table, th, td{border: 1px solid #ccc; border-collapse: collapse;}
+.product table, th, td{padding: 10px 20px;}
+.product table caption{margin-bottom: 10px;}
+
+
+/* footer 영역 */
+footer{height: 100px; border-top: 2px solid #222;}
+footer #bottomMenu{list-style: none; margin: 10px 20px 10px 60px;} 
+footer #bottomMenu li{display: inline-block; margin: 10px 0; 
+    border-right: 1px solid #ccc; padding: 0 15px;}
+footer #bottomMenu li:last-child{border: none;}
+footer #bottomMenu li a{text-decoration: none; color: #666;}
+footer #bottomMenu li a:hover{text-decoration: underline; color: rgb(109, 109, 206);}
